@@ -1,0 +1,122 @@
+/* 取消button的默认样式 */
+button {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: none;
+  background-color: #fff;
+}
+
+/* 取消input的默认样式 */
+input {
+  background: none;
+  outline: none;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 96vh;
+  margin: auto;
+}
+
+/* 标题 */
+.title {
+  color: aquamarine;
+  text-align: center;
+  margin: 0;
+}
+
+/* 底部表单 */
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 输入框 */
+.prompt {
+  width: 60%;
+  height: 30px;
+  border: 2px solid palegreen;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 10px;
+  transition: border-color 0.5s;
+}
+
+/* 输入框聚焦 */
+.prompt:focus {
+  border-color: aqua;
+}
+
+/* 按钮 */
+.submit {
+  width: 20%;
+  height: 50px;
+  font-size: 16px;
+  background-image: linear-gradient(aqua, aquamarine);
+  border-radius: 6px;
+  color: purple;
+}
+
+/* 照片 */
+.container .image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 30%;
+  border-radius: 10px;
+}
+
+/* 等待加载框 */
+.wait {
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+  text-align: center;
+  line-height: 200px;
+  color: purple;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+/* 提示 */
+.tip {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 40px;
+  background-color: deepskyblue;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+}
+
+.hide {
+  transition: display 0.5s;
+  display: none;
+}
+
+.show {
+  transition: display 0.5s;
+  display: block;
+}
+
+/* 手机适配 */
+@media screen and (max-width: 750px) {
+  .container .image {
+    width: 80%;
+  }
+
+  .submit {
+    width: 25%;
+  }
+}

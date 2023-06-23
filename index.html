@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIDRAW</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/axios.min.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+  <!-- 异常提示 -->
+  <div class="tip hide"></div>
+  <div class="box">
+    <h1 class="title">AIDRAW</h1>
+    <div class="container">
+      <div class="wait" style="display: none;">60秒后获取图片</div>
+      <img src="" class="image">
+    </div>
+    <div class="form">
+      <input type="text" class="prompt" placeholder="请输入提示词">
+      <button class="submit">提交</button>
+    </div>
+  </div>
+</body>
+
+</html>
