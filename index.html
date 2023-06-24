@@ -13,16 +13,26 @@
 
 <body>
   <!-- 异常提示 -->
-  <div class="tip hide"></div>
+  <div class="tip" style="opacity: 0;"></div>
   <div class="box">
     <h1 class="title">AIDRAW</h1>
     <div class="container">
-      <div class="wait" style="display: none;">60秒后获取图片</div>
-      <img src="" class="image">
+      <div class="wait" style="opacity: 0;">60秒后获取图片</div>
+      <a class="download-a" target="_blank">
+        <img class="image">
+      </a>
     </div>
-    <div class="form">
-      <input type="text" class="prompt" placeholder="请输入提示词">
-      <button class="submit">提交</button>
+    <div class="bottom">
+      <div class="btn-img-check-box" style="opacity: 0;">
+        <button class="btn-img-check">v1</button>
+        <button class="btn-img-check">v2</button>
+        <button class="btn-img-check">v3</button>
+        <button class="btn-img-check">v4</button>
+      </div>
+      <div class="form">
+        <input type="text" class="prompt" placeholder="请输入提示词">
+        <button class="submit">提交</button>
+      </div>
     </div>
   </div>
 </body>
