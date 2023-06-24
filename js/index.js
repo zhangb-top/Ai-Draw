@@ -65,15 +65,17 @@ window.addEventListener('load', function () {
     const image = document.querySelector('.image')
     const download = document.querySelector('.download-a')
     const btnImgCheckBox = document.querySelector('.btn-img-check-box')
+    if (btnImgCheckBox.className.includes('show')) fadeIn(btnImgCheckBox)
     image.src = ''
     download.href = ''
-    fadeOut(wait)
     submit.disabled = true
     prompt.disabled = true
     prompt.placeholder = '图片加载中禁止输入'
     data.prompt = ''
     document.querySelector('.prompt').value = ''
-    // 等待30秒再获取图片
+    wait.innerHTML = `${60}秒后获取图片`
+    fadeOut(wait)
+    // 等待1分钟再获取图片
     let num = 60
     let timer = setInterval(() => {
       num--
@@ -82,7 +84,6 @@ window.addEventListener('load', function () {
         clearInterval(timer)
         fadeIn(wait)
         if (data.type === 'U') {
-          fadeIn(btnImgCheckBox)
           document.querySelector('.btn-img-check.active').classList.remove('active')
           data.imgId = ''
           data.num = 0
