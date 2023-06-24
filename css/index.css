@@ -114,11 +114,26 @@ input {
   text-align: center;
   line-height: 200px;
   color: purple;
-  border-radius: 20px;
+  clip-path: circle(50% at center);
   font-size: 18px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   opacity: 0.8;
   cursor: pointer;
+  background-image: url(http://cdn.zhangb.top/logo.jpg);
+  background-size: cover;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, red, yellow, green, blue) 1;
+  animation: borderRotation 5s ease-in-out infinite;
+}
+
+@keyframes borderRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* 提示 */

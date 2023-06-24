@@ -73,16 +73,14 @@ window.addEventListener('load', function () {
     prompt.placeholder = '图片加载中禁止输入'
     data.prompt = ''
     document.querySelector('.prompt').value = ''
-    wait.innerHTML = `${60}秒后获取图片`
-    fadeOut(wait)
+    wait.style.opacity = 1
     // 等待1分钟再获取图片
     let num = 60
     let timer = setInterval(() => {
       num--
-      wait.innerHTML = `${num}秒后获取图片`
       if (num === 0) {
         clearInterval(timer)
-        fadeIn(wait)
+        wait.style.opacity = 0
         if (data.type === 'U') {
           document.querySelector('.btn-img-check.active').classList.remove('active')
           data.imgId = ''
